@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuCmpComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+   }
 
   ngOnInit() {
   }
@@ -16,6 +18,4 @@ export class MenuCmpComponent implements OnInit {
     alert("Button is clicked");
     console.log(event);
   }
-}
-
 }

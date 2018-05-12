@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import {RouterModule} from '@angular/router'
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,6 +27,11 @@ import { AboutUsComponent } from './about-us/about-us.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    RouterModule.forRoot([
+      // {path: '', component: },
+      {path: 'about', component: AboutUsComponent},
+      // {path: '**', component: MapCmpComponent}
+    ])
    //  AgmCoreModule.forRoot({
    //   apiKey: 'YOUR_KEY'//still needs key
    // })

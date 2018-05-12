@@ -2,7 +2,7 @@
   <mat-icon>menu</mat-icon>
 </button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>About</button>
+  <button mat-menu-item routerLink='/about'>About</button>
   <button mat-menu-item (click)="contactOpenFunction($event)">Contact</button>
   <button mat-menu-item>Support the Network</button>
 </mat-menu>
