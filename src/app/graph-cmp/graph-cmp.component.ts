@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Chart } from 'chart.js';
 
 @Component({
@@ -7,6 +7,8 @@ import { Chart } from 'chart.js';
   styleUrls: ['./graph-cmp.component.css']
 })
 export class GraphCmpComponent implements OnInit {
+
+  @Input() name;
 
   constructor() { }
 
@@ -20,7 +22,12 @@ export class GraphCmpComponent implements OnInit {
     let tags = [];
     let x = [];
     let y = [];
-    for(var i=0; i<10; i++){
+    let a = -5;
+
+    if(name == "graph1"){
+      a = 1;
+    }
+    for(var i=0; i<10*a; i++){
       tags.push(i);
       x.push(i*10);
       y.push(i*5+2);

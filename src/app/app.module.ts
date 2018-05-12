@@ -21,7 +21,10 @@ import { MenuCmpComponent } from './menu-cmp/menu-cmp.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+   //  AgmCoreModule.forRoot({
+   //   apiKey: 'YOUR_KEY'//still needs key
+   // })
   ],
   providers: [],
   bootstrap: [AppComponent]

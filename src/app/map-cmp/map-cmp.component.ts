@@ -10,6 +10,7 @@ export class MapCmpComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
