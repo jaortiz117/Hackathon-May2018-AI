@@ -9,13 +9,15 @@ import { MaterialModule } from './material.module';
 import { GraphCmpComponent } from './graph-cmp/graph-cmp.component';
 import { MapCmpComponent } from './map-cmp/map-cmp.component';
 import { MenuCmpComponent } from './menu-cmp/menu-cmp.component';
+import { Graph2Component } from './graph2/graph2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GraphCmpComponent,
     MapCmpComponent,
-    MenuCmpComponent
+    MenuCmpComponent,
+    Graph2Component
   ],
   imports: [
     BrowserModule,
