@@ -27,18 +27,18 @@ export class Graph2Component implements OnInit {
     }
 
     chart2 = new Chart('canvas2', {
-      type: 'line',
+      type: 'bar',
       data: {
         labels: tags,
         datasets: [
           {
             data: x,
-            borderColor: "#3cba9f",
+            backgroundColor: "#3cba9f",
             fill: false
           },
           {
             data: y,
-            borderColor: "#ffcc00",
+            backgroundColor: "#ffcc00",
             fill: false
           },
         ]
