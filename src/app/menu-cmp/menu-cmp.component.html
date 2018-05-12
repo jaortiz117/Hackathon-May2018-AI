@@ -1,3 +1,8 @@
-<p>
-  menu-cmp works!
-</p>
+<button mat-button [matMenuTriggerFor]="menu">
+  <mat-icon>menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>About</button>
+  <button mat-menu-item>Contact</button>
+  <button mat-menu-item>Support the Network</button>
+</mat-menu>

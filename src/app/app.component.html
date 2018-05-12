@@ -1,22 +1,42 @@
-<button mat-button>My Button</button>
-
-<router-outlet></router-outlet>
-
 <!-- Menu -->
 <app-menu-cmp></app-menu-cmp>
 
-<!-- Center -->
-<h1>
-  Center Place Holder
-</h1>
+<mat-grid-list cols="3" rowHeight="200px">
+  <mat-grid-tile
+      [colspan]="3"
+      [rowspan]="2">
 
-<!-- Graph -->
-<app-graph-cmp></app-graph-cmp>
+      <!-- Center -->
+      <h1>
+        Center Place Holder
+      </h1>
+  </mat-grid-tile>
+  <mat-grid-tile
+      [colspan]="1"
+      [rowspan]="1">
 
-<!-- Form -->
-<h1>
-  Form Placeholder
-</h1>
+      <!-- Graph -->
+      <app-graph-cmp></app-graph-cmp>
 
-<!-- Map -->
-<app-map-cmp></app-map-cmp>
+  </mat-grid-tile>
+  <mat-grid-tile
+      [colspan]="1"
+      [rowspan]="1">
+
+      <!-- Form -->
+      <h1>
+        Form Placeholder
+      </h1>
+
+  </mat-grid-tile>
+  <mat-grid-tile
+      [colspan]="1"
+      [rowspan]="1">
+
+      <!-- Map -->
+      <app-map-cmp></app-map-cmp>
+
+  </mat-grid-tile>
+</mat-grid-list>
+
+<router-outlet></router-outlet>
