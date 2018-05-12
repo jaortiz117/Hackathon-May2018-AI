@@ -1,3 +1,66 @@
-<p>
-  map-cmp works!
-</p>
+
+
+<head>
+  <style>
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+  </style>
+</head>
+<body>
+  <h3>My Google Maps Demo</h3>
+  <div id="map"></div>
+  <script>
+  function initMap() {
+    //New map
+    var cen = {lat: 18.2208, lng: -66.4001};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 9,
+      center: cen
+    });
+
+    //Draggable pin w. intial Current Location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position){
+        var currentTime = new Date();
+        var user_time = currentTime.getHours() * 60 + currentTime.getMinutes();
+        console.log(user_time);
+
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        console.log(latitude);
+        console.log(longitude);
+        var coords = new google.maps.LatLng(latitude, longitude);
+
+        var marker = new google.maps.Marker({
+          position: coords,
+          map: map,
+          animation: google.maps.Animation.DROP,
+          draggable: true,
+          title: "You are here!"
+        });
+
+        google.maps.event.addListener(marker, "drag", function(){
+          var latitude=marker.getPosition().lat();
+          var longitude=marker.getPosition().lng();
+          console.log(latitude);
+          console.log(longitude);
+          console.log(user_time);
+        });
+
+      });
+
+
+      }
+  }
+
+
+  </script>
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-QAbNlslPECgZbQAXfdP_W_xy2aK6FH8&callback=initMap">
+  </script>
+
+</body>
