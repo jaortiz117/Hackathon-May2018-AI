@@ -14,7 +14,7 @@ export class GraphCmpComponent implements OnInit {
 
   ngOnInit() {
 
-
+console.log(name);
     let chart = [];
 
 
