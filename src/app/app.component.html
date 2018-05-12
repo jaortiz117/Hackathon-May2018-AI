@@ -1,6 +1,11 @@
 <!-- Menu -->
 <mat-toolbar color="primary">
-  <app-menu-cmp></app-menu-cmp>
+  <span>
+    <app-menu-cmp></app-menu-cmp>
+  </span>
+  <span class="spacer"></span>
+  <h1 class = "title">The Round Table</h1>
+  <span class="spacer"></span>
 </mat-toolbar>
 
 <mat-grid-list cols="3" rowHeight="200px">
@@ -8,10 +13,9 @@
       [colspan]="3"
       [rowspan]="2">
 
-      <!-- Center -->
-      <h1>
-        Center Place Holder
-      </h1>
+      <!-- Map -->
+      <app-map-cmp></app-map-cmp>
+
   </mat-grid-tile>
   <mat-grid-tile
       [colspan]="1"
@@ -27,7 +31,7 @@
 
       <!-- Form -->
       <h1>
-        Form Placeholder
+        button and results placeholder
       </h1>
 
   </mat-grid-tile>
@@ -35,8 +39,10 @@
       [colspan]="1"
       [rowspan]="1">
 
-      <!-- Map -->
-      <app-map-cmp></app-map-cmp>
+      <!-- Graph 2 -->
+      <h2>
+        Graph 2
+      </h2>
 
   </mat-grid-tile>
 </mat-grid-list>
