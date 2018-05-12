@@ -13,6 +13,7 @@
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';** "> -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,9 +25,27 @@
 </head>
 <body class="mat-app-background">
   <!-- <base href="/"> -->
-  <app-root></app-root>
+  <app-root>
+
+
+
+</app-root>
+
+<form id="myForm" action="." method="POST">
+  <input type='hidden' id= 'longitude' name='longitude' value='' />
+  <input type='hidden' id= 'latitude' name='latitude' value='' />
+  <input type='hidden' id= 'user_time' name='user_time' value='' />
+  <button mat-fab color="accent" class="buttons" type="submit" form="myForm" value="Submit">
+    Analyze
+  </button>
+</form>
+
+
+
+
 
   <body>
+
     <div id="map"></div>
     <script>
     function initMap() {
@@ -65,6 +84,10 @@
             console.log(latitude);
             console.log(longitude);
             console.log(user_time);
+            document.getElementById('latitude').value = latitude;
+            document.getElementById('longitude').value = latitude;
+            document.getElementById('user_time').value = latitude;
+            // document.getElementById("myForm").submit();
           });
 
         });
