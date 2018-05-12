@@ -10,6 +10,7 @@ import { GraphCmpComponent } from './graph-cmp/graph-cmp.component';
 import { MapCmpComponent } from './map-cmp/map-cmp.component';
 import { MenuCmpComponent } from './menu-cmp/menu-cmp.component';
 import { Graph2Component } from './graph2/graph2.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { Graph2Component } from './graph2/graph2.component';
     GraphCmpComponent,
     MapCmpComponent,
     MenuCmpComponent,
-    Graph2Component
+    Graph2Component,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

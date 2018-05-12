@@ -1,50 +1,63 @@
 <!-- Menu -->
-<mat-toolbar color="primary">
+<mat-toolbar color="accent">
   <span>
     <app-menu-cmp></app-menu-cmp>
   </span>
   <span class="spacer"></span>
-  <h1 class = "title">The Round Table</h1>
+  <h1 class = "title">The Round Table Development Team</h1>
   <span class="spacer"></span>
 </mat-toolbar>
 
-<mat-grid-list cols="3" rowHeight="200px">
-  <mat-grid-tile
-      [colspan]="3"
-      [rowspan]="2">
+<div *ngIf="!showMenuPage">
+  <mat-grid-list cols="3" rowHeight="200px">
+    <mat-grid-tile
+    [colspan]="3"
+    [rowspan]="2">
 
-      <!-- Map -->
-      <app-map-cmp></app-map-cmp>
+    <img src="\assets\banner.png" />
 
-
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
-
-      <!-- Graph -->
-      <app-graph-cmp></app-graph-cmp>
 
   </mat-grid-tile>
   <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
+  [colspan]="3"
+  [rowspan]="1">
 
-If a crime were to happen right now, What are the odds of each one?
-      <!-- Analysis -->
-      <button mat-fab color="accent" class="buttons">
-        Analyze
-      </button>
+  <!-- Map -->
+  <app-map-cmp></app-map-cmp>
 
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
 
-      <!-- Graph 2 -->
-      <app-graph2></app-graph2>
+</mat-grid-tile>
+<mat-grid-tile
+[colspan]="1"
+[rowspan]="1">
 
-  </mat-grid-tile>
+<!-- Graph -->
+<app-graph-cmp></app-graph-cmp>
+
+</mat-grid-tile>
+<mat-grid-tile
+[colspan]="1"
+[rowspan]="1">
+<!-- Analysis -->
+<button mat-fab color="accent" class="buttons">
+  Analyze
+</button>
+
+</mat-grid-tile>
+<mat-grid-tile
+[colspan]="1"
+[rowspan]="1">
+
+<!-- Graph 2 -->
+<app-graph2></app-graph2>
+
+</mat-grid-tile>
 </mat-grid-list>
+</div>
 
+<div *ngIf="showMenuPage">
+  <div *ngIf="showContactPage">
+    
+  </div>
+</div>
 <router-outlet></router-outlet>

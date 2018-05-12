@@ -12,4 +12,10 @@ export class MenuCmpComponent implements OnInit {
   ngOnInit() {
   }
 
+  contactOpenFunction(event) {
+    alert("Button is clicked");
+    console.log(event);
+  }
+}
+
 }

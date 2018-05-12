@@ -3,6 +3,18 @@
 
 $custom-primary: mat-palette($mat-gray);
 $custom-accent:  mat-palette($mat-blue);
+$custom-background: mat-palette($mat-blue-gray, 100);
+
+// @function mat-light-theme($primary, $accent, $warn: mat-palette($mat-red)) {
+//   @return (
+//     primary: $primary,
+//     accent: $accent,
+//     warn: $warn,
+//     is-dark: false,
+//     foreground: $mat-light-theme-foreground,
+//     background:$custom-background,
+//   );
+// }
 
 $custom-theme: mat-light-theme($custom-primary, $custom-accent);
 
